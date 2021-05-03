@@ -1,0 +1,36 @@
+<html>
+
+<head>
+    <title>TBPxTSE Databases Demo</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <h1>Note taking app</h1>
+    <div id="app-container">
+        <div id="left-container">
+            <div id="buttons-container">
+                <button onclick="viewCreateNote()">New note</button>
+                <button onclick="sortByCreatedAt()">Sort created at</button>
+                <button onclick="sortByLikes()">Sort likes</button>
+            </div>
+            <h2 id="notes-list-title">Notes list</h2>
+            <div id="notes-list-container">
+                <ul id="notes-list">
+                </ul>
+                <p id="notes-list-loading">Loading...</p>
+            </div>
+        </div>
+        <div id="content-container">
+        </div>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-firestore.js"></script>
+
+    <script src="firebase.js"></script>
+    <script src="view.js"></script>
+    <script src="controller.js"></script>
+</body>
+
+</html>

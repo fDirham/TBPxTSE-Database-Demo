@@ -1,0 +1,57 @@
+#app-container {
+    display: flex;
+    flex-direction: row;
+}
+
+#left-container {}
+
+#notes-list-container {
+    width: 300px;
+    border-style: solid;
+    border-color: black;
+    border-width: 0 1px 0 0;
+    height: 90vh;
+    overflow-y: scroll;
+    padding-left: 10px;
+}
+
+#buttons-container {
+    width: 300px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#content-container {
+    width: 100%;
+    padding-left: 10px;
+}
+
+#create-form {
+    display: flex;
+    flex-direction: column;
+}
+
+#notes-list-title {
+    border: 0px black solid;
+    padding: 5px 0;
+    border-bottom-width: 1px;
+}
+
+#notes-list {
+    padding: 0;
+    list-style-type: none;
+}
+
+.note-block {
+    border: 0px solid black;
+    border-bottom-width: 1px;
+}
+
+.note-block:hover {
+    cursor: pointer;
+}
+
+ul .block-title {
+    font-weight: bold;
+}
