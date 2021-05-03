@@ -19,7 +19,7 @@ This was created for the UCSD TSExTBP Databases Workshop on May 2021.
 6. How to sort the results of listening to changes in a collection
 
 ## Getting started
-Simply open index.html on the webpage.
+Simply open index.html on a web browser.
 
 
 ## Note schema
