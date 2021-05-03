@@ -18,6 +18,10 @@ This was created for the UCSD TSExTBP Databases Workshop on May 2021.
 5. How to delete and update a document
 6. How to sort the results of listening to changes in a collection
 
+## Getting started
+Simply open index.html on the webpage.
+
+
 ## Note schema
 Although firestore's documents do not have to follow a rigid schema, the front end for this demo will only work if note documents are within the "notes" collection and have the following fields:
 * title: string,
