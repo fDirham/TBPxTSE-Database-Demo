@@ -4,7 +4,7 @@ This web app was created for aspiring web developers to learn the basics of mani
 This web app serves as a simple single page note taking app. Users can create notes by filling in a title, author, and content. 
 All created notes are shown as a list on the left side of the screen. Users can like or delete notes and sort notes in the list by date or likes.
 
-This was created for the UCSD TSExTBP Databases Workshop on May 2021.
+This was created for the UCSD TSExTBP Databases Workshop on May 2021. Check out the "solutions" branch to see finished and filled in code.
 
 ### We assume that you:
 1. Have basic understanding of Javascript or are willing to learn. 
