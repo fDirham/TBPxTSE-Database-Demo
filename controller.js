@@ -1,5 +1,8 @@
+// Delete all "NOT IMPLEMENTED" alerts after implementing functions
+
 /*
-Adds a new note into the "notes" collection in firestore.
+TODO: Adds a new note into the "notes" collection in firestore.
+
 Check the notes schema on the readme for fields the document should have.
 You should initialize likes to 0 and created_at to the current server time in firestore.
 
@@ -19,24 +22,14 @@ async function createNewNote ()
 
     try
     {
-        // Check if document with title exists
-        const existingNotes = await firebase.firestore().collection( "notes" ).where( "title", "==", newTitle ).get()
-        if ( !existingNotes.empty )
+        // TODO: Check if document with title exists, replace false below with the result of this check
+        if ( false )
         {
             alert( "Note with title already exists" )
             return
         }
 
-        // Add document to collection
-        const newNote = {
-            title: newTitle,
-            author: newAuthor,
-            content: newContent,
-            likes: 0,
-            created_at: firebase.firestore.FieldValue.serverTimestamp()
-        }
-
-        await firebase.firestore().collection( "notes" ).add( newNote )
+        // TODO: Add document to collection
 
         // Reset form
         resetCreateNoteForm()
@@ -50,6 +43,8 @@ async function createNewNote ()
 }
 
 /*
+TODO: Get a note from notes collection using id
+
 Use a note's document id to get it from the database, it should be in the "notes" collection.
 return: the document's data in json.
 
@@ -59,8 +54,8 @@ async function getNote ( id )
 {
     try
     {
-        const noteRes = await firebase.firestore().collection( "notes" ).doc( id ).get()
-        return noteRes.data()
+        // Get note document from notes collection
+        return /*Note document's data*/
     }
     catch ( error )
     {
@@ -70,7 +65,7 @@ async function getNote ( id )
 }
 
 /*
-Delete a note with the id given. 
+TODO: Delete a note with the id given. 
 
 Function is called when users click on delete in a note page.
 */
@@ -78,7 +73,7 @@ async function deleteNote ( id )
 {
     try
     {
-        await firebase.firestore().collection( "notes" ).doc( id ).delete()
+        // TODO: Delete note from notes collection
 
         // Move away from note view
         viewCreateNote()
@@ -92,7 +87,7 @@ async function deleteNote ( id )
 }
 
 /*
-Update the "likes" field of a note document by 1. 
+TODO: Update the "likes" field of a note document by 1. 
 This is possible without getting the document's entire data.
 
 Function is called when users like a note.
@@ -101,7 +96,9 @@ async function likeNote ( id )
 {
     try
     {
-        await firebase.firestore().collection( "notes" ).doc( id ).update( { likes: firebase.firestore.FieldValue.increment( 1 ) } )
+        // TODO: Increment note likes
+
+        // Update front end likes
         incrementNoteLikes()
     }
     catch ( error )
@@ -115,6 +112,8 @@ async function likeNote ( id )
 var notesListener = null;
 
 /*
+TODO: Set a notes listener sorted by created_at desc
+
 If notesListener is not null, unsubscribe from listening to collection changes by calling notesListener().
 
 Set notesListener to a new listener that returns documents in the "notes" collection in real time.
@@ -132,23 +131,15 @@ Function is called when users click on "sort created at"
 
 function sortByCreatedAt ()
 {
-    if ( notesListener )
-    {
-        notesListener()
-    }
-    notesListener = firebase.firestore().collection( "notes" ).orderBy( "created_at", "desc" )
-        .onSnapshot( ( querySnapshot ) =>
-        {
-            var noteDocs = []
-            querySnapshot.forEach( doc =>
-            {
-                noteDocs.push( { id: doc.id, ...doc.data() } )
-            } );
-            renderNotesList( noteDocs )
-        } );
+    // TODO: Unsubscribe from listener if it exists
+    // TODO: Set notes listener and render new notesList
+    var noteDocs = []
+    renderNotesList( noteDocs )
 }
 
 /*
+TODO: Set a notes listener sorted by likes desc
+
 If notesListener is not null, unsubscribe from listening to collection changes by calling notesListener().
 
 Set notesListener to a new listener that returns documents in the "notes" collection in real time.
@@ -166,20 +157,16 @@ Function is called when users click on "sort likes"
 
 function sortByLikes ()
 {
-    if ( notesListener )
-    {
-        notesListener()
-    }
-    notesListener = firebase.firestore().collection( "notes" ).orderBy( "likes", "desc" )
-        .onSnapshot( ( querySnapshot ) =>
-        {
-            var noteDocs = []
-            querySnapshot.forEach( doc =>
-            {
-                noteDocs.push( { id: doc.id, ...doc.data() } )
-            } );
-            renderNotesList( noteDocs )
-        } );
+    // TODO: Unsubscribe from listener if it exists
+    // TODO: Set notes listener and render new notesList
+    var noteDocs = []
+    renderNotesList( noteDocs )
 }
 
-sortByCreatedAt()
+/*
+TODO: Delete renderNotesList and uncomment one of the functions after implementing the two functions above
+*/
+
+renderNotesList( [] )
+//sortByCreatedAt()
+//sortByLikes()

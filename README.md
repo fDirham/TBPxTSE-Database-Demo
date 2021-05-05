@@ -30,7 +30,8 @@ Although firestore's documents do not have to follow a rigid schema, the front e
 * likes: int,
 * created_at: firestore timestamp
 
-## Firestore Documentation
+## Firebase / Firestore Documentation
+* [adding firebase](https://firebase.google.com/docs/web/setup)
 * [add data](https://firebase.google.com/docs/firestore/manage-data/add-data)
 * [delete data](https://firebase.google.com/docs/firestore/manage-data/delete-data)
 * [get data](https://firebase.google.com/docs/firestore/query-data/get-data)
