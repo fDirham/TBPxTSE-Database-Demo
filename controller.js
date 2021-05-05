@@ -1,5 +1,3 @@
-// Delete all "NOT IMPLEMENTED" alerts after implementing functions
-
 /*
 TODO: Adds a new note into the "notes" collection in firestore.
 
