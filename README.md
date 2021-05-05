@@ -10,6 +10,9 @@ This was created for the UCSD TSExTBP Databases Workshop on May 2021.
 1. Have basic understanding of Javascript or are willing to learn. 
 2. Understand the basics of document collection databases. 
 
+## Getting Started
+Simply open index.html on a web browser. Create a Firebase project then add it to this project by editing index.html and firebase.js. Afterwards, edit controller.js
+
 ## What you will learn
 1. How to create a firebase project and connect it to your web app, along with firebase's firestore database service.
 2. How to create documents in a collection
@@ -17,9 +20,6 @@ This was created for the UCSD TSExTBP Databases Workshop on May 2021.
 4. How to listen for changes in a collection and return the results
 5. How to delete and update a document
 6. How to sort the results of listening to changes in a collection
-
-## Getting started
-Simply open index.html on a web browser.
 
 
 ## Note schema
